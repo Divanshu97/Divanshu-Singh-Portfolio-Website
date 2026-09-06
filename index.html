@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divanshu Kumar Singh — Senior Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="atmo">
+  <div class="atmo-blob b1" id="blob1"></div>
+  <div class="atmo-blob b2" id="blob2"></div>
+  <div class="atmo-blob b3" id="blob3"></div>
+  <div class="poster p1" id="poster1">CRAFT</div>
+  <div class="poster p2" id="poster2">JOYFUL</div>
+  <div class="poster p3" id="poster3">DESIGN</div>
+</div>
+<canvas id="sceneCanvas"></canvas>
+<svg class="grain" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+</svg>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"><span id="cursorLabel"></span></div>
+
+<header id="siteHeader">
+  <div class="header-inner">
+    <a href="#hero" class="mark">DKS</a>
+    <nav>
+      <a href="Divanshu_Kumar_Singh_Senior_Product_Designer_Resume.pdf" id="resumeLink" download="Divanshu_Kumar_Singh_Senior_Product_Designer_Resume.pdf" data-magnetic>Resume ↓</a>
+      <a href="https://www.behance.net/divanshuchauhan" target="_blank" rel="noopener" data-magnetic>Behance</a>
+      <a href="mailto:chauhanarya79@gmail.com" data-magnetic>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow"><span class="dot"></span>Open to new product design work</div>
+    <h1 class="name" id="heroName">
+      <span class="word"><em>Hi, I'm</em></span>
+      <span class="word tinted"><em>Divanshu</em></span>
+      <span class="word outline rotate"><em>Singh</em></span>
+    </h1>
+    <p class="hero-role"><strong>Product Designer</strong> focused on crafting intuitive digital experiences with strong UX thinking, scalable design systems, and business-driven solutions. Recently gained international onsite experience while working with <strong>Bupa Health Insurance Company in Saudi Arabia</strong>, collaborating with cross-functional teams to deliver impactful healthcare products.</p>
+    <div class="scroll-cue"><div class="line"></div><span>Scroll to explore</span></div>
+  </section>
+
+  <section class="workspace" id="workspace">
+    <div class="workspace-head reveal">
+      <h2>A peek at my desk</h2>
+      <p>The things I actually reach for, scattered the way they'd sit on a real desk.</p>
+    </div>
+    <div class="board" id="board"><!-- generated below --></div>
+  </section>
+
+  <section id="work">
+    <div class="section-head reveal">
+      <h2>Featured Projects</h2>
+      <p>Ten products. Hover any of them to open the stack — the whole page changes color with it.</p>
+    </div>
+    <div class="project-list"><!-- generated below --></div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-cta reveal">
+      <h2>Let's build something people love to use.</h2>
+      <a class="magnetic-btn" data-magnetic href="mailto:chauhanarya79@gmail.com">
+        Say hello
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="footer-links">
+      <div class="col">
+        <a href="mailto:chauhanarya79@gmail.com" data-magnetic>Email</a>
+        <a href="https://www.linkedin.com/in/kinghtfury97/" target="_blank" rel="noopener" data-magnetic>LinkedIn</a>
+        <a href="Divanshu_Kumar_Singh_Senior_Product_Designer_Resume.pdf" id="resumeLinkFooter" download="Divanshu_Kumar_Singh_Senior_Product_Designer_Resume.pdf" data-magnetic>Resume</a>
+      </div>
+      <div class="copy">© 2026 Divanshu Kumar Singh</div>
+    </div>
+  </footer>
+
+</main>
+
+<div class="preview-stack" id="previewStack">
+  <div class="stack-card"><img alt=""></div>
+  <div class="stack-card"><img alt=""></div>
+  <div class="stack-card"><img alt=""></div>
+  <div class="stack-card"><img alt=""></div>
+  <div class="stack-card"><img alt=""></div>
+</div>
+
+<script src="script.js"></script>
+
+<script type="module" src="three-scene.js"></script>
+
+</body>
+</html>
